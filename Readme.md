@@ -17,6 +17,14 @@ Like Promise.defer(). Works the same ways as Promise.defer(), which isn't in the
 ```js
 var deferPromise = require('@f/defer-promise')
 
+var deferred = deferPromise()
+
+deferred.promise.then(function (val) {
+  console.log('woot ' + val)
+})
+deferred.resolve('yo')
+// => "woot yo"
+
 ```
 
 ## API
